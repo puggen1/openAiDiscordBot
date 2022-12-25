@@ -12,6 +12,9 @@ async function createImage(imgString, numberOfImages = 2, size = "1024x1024") {
     n: numberOfImages,
     size: size,
   });
-  console.log(response.data);
+  return response.data;
 }
-createImage("russian president 3d art");
+
+module.exports = {
+  createImage,
+};
