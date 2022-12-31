@@ -23,6 +23,11 @@ module.exports = {
         .setName("size")
         .setDescription("the size of the pictures")
         .setRequired(false)
+        .addChoices(
+          { name: '256x256', value: '256x256' },
+          { name: '512x512', value: '512x512' },
+          { name: '1024x1024', value: '1024x1024'},
+        )
     ),
   async execute(interaction) {
     let input = interaction.options.getString("input");
@@ -34,7 +39,7 @@ module.exports = {
       : "1024x1024";
     await interaction.deferReply("Creating a masterpiece");
     let response = await createImage(input, amount, size);
-    let embeds = sendImages(response);
+    let embeds = sendImages(response, input);
     await wait(4000);
     await interaction.editReply({ embeds: [embeds] });
   },

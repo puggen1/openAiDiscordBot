@@ -2,6 +2,23 @@
 
 this is my small project to make openai talk to discord bots AKA integrate openai to discord servers
 
+## how to start
+
+### install
+to install the required packages, use:
+```
+npm i
+```
+### local environment 
+you have to add the required authorization to the local environment (.env)
+check .env.example for example
+
+### start server
+to start the discord bot use:
+```
+node .
+```
+
 ## commands so far
 
 ### ask
