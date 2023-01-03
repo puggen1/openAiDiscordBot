@@ -1,6 +1,6 @@
 {
   "name": "openaidiscordbot",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "this is my project to get openai to talk to my discord server",
   "main": "script.js",
   "scripts": {
